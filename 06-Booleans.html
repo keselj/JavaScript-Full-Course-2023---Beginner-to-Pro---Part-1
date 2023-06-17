@@ -5,6 +5,7 @@
   </head>
   <body>
     <script>
+      
       console.log(typeof true);
       false
 
@@ -29,6 +30,70 @@
       } else {
         console.log('You can not drive');
       }
+
+      
+      // And operator &&
+      console.log(true && false);
+      console.log(0.2 >= 0 && 0.2 < 1/3);
+      // Or operator ||
+      console.log(true || false);
+      // Not operator !
+      console.log(!false)
+      
+
+      
+
+      if(0) {
+        console.log('trurthy');
+      }
+
+      const cartQuantity = 5;
+      if (cartQuantity) {
+        console.log('Cart has products.')
+      }
+
+      console.log(!0);
+
+      // Nan
+      console.log('text' / 5);
+
+      //Undefined
+      let variable1;
+      console.log(variable1);
+      //Undefined only works with let in exsample aboeve
+      // With const only works if it's defined as undefined
+      const variable2 = undefined;
+      console.log(variable2);
+      
+
+      //Ternary Operator ? :
+      // it's like a shorcut for if/else statment 
+      // it can be saved in variable
+
+      const result = true ? 'truthy' : 'falsy';
+      console.log(result);
+      const result1 = 0 ? 'truthy' : 'falsy';
+      console.log(result1);
+
+      //Guard Operator &&(and)
+      //As well it's kinda a shorcut for if statment.
+      // it can be saved in variable
+
+      false && console.log('hello');
+      const message = 5 && 'hello';
+      console.log(message);
+
+      //Default operator ||(or)
+      //It chooses which side is true and uses that one
+      //But it first looks the left side
+      // it can be saved in variable
+
+      const currency = undefined || 'USD';
+      console.log(currency);
+
+
+
+
     </script>
   </body>
 </html> 
