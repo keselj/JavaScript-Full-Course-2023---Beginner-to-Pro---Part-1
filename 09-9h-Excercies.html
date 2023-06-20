@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Excercies</title>
+  </head>
+  <body>
+    <input placeholder="text" onkeyup="displayText()" class="js-text">
+    <p class="js-p"></p>
+    <script>
+      function displayText() {
+        const inputElement = document.querySelector('.js-text');
+        let displayElement = inputElement.value;
+        document.querySelector('.js-p').innerHTML = displayElement;
+      }
+
+    </script>
+  </body>
+</html>
