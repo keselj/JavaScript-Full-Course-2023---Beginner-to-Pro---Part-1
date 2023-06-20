@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Excercies</title>
+    <style>
+      .add-button {
+        background-color: rgb(255, 216, 20);
+        color: black;
+        font-family: Arial;
+        padding: 10px 40px;
+        border-radius: 30px;
+        border: none;
+        font-weight: bolder;
+        margin-right: 40px;
+      }
+      body {
+        background-color: white;
+      }
+
+      .request-button {
+        background-color: black;
+        color: white;
+        padding: 10px 40px;
+        border: none;
+        border-radius: 10px;
+        margin-right: 20px;
+      }
+
+      .schedule-button {
+        background-color: rgb(230, 230, 230);
+        color: black;
+        padding: 10px 40px;
+        border: none;
+        border-radius: 10px;
+      }
+
+      .toggle-button {
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }
+
+      .is-toggled1 {
+        background-color: black;
+        color: white;
+      }
+
+      .is-toggled2 {
+        background-color: black;
+        color: white;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <button class="add-button">Add to Cart</button>
+
+    <p></p>
+
+    <button class="request-button">Request now</button>
+    <button class="schedule-button"   >Schedule for later</button>
+
+    <p></p>
+
+    <button class="js-button11" onclick="
+      console.log()
+    ">Test</button>
+
+    <p></p>
+
+    <button class="toggle-button js-button" onclick="
+      const button = document.querySelector('.js-button');
+      if (!button.classList.contains('is-toggled')) {
+       button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+  ">Gaming</button>
+
+  <button class="toggle-button js-button1" onclick="
+    const musicButton = document.querySelector('.js-button1');
+    if (!musicButton.classList.contains('is-toggled1')) {
+      musicButton.classList.add('is-toggled1')
+    } else {
+      musicButton.classList.remove('is-toggled1')
+    }
+  ">Music</button>
+
+  <button class="toggle-button js-button2" onclick="
+    const techButton = document.querySelector('.js-button2');
+    if (!techButton.classList.contains('is-toggled2')){
+      techButton.classList.add('is-toggled2')
+    } else {
+      techButton.classList.remove('is-toggled2');
+    }
+  ">Tech</button>
+
+    
+
+    <script>
+      const test = document.querySelector('.js-button1');
+      console.log(test.classList.contains('js-button1'));
+
+
+    </script>
+  </body>
+</html>
