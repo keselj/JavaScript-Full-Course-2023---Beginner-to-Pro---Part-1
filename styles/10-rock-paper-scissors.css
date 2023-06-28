@@ -1,6 +1,5 @@
-
 body {
-  background-color: rgb(25,25, 25);
+  background-color: rgb(25, 25, 25);
   color: white;
   font-family: Arial;
 }
@@ -13,6 +12,7 @@ body {
 .move-icon {
   height: 50px;
 }
+
 .move-buttons {
   background-color: transparent;
   border: 3px solid white;
