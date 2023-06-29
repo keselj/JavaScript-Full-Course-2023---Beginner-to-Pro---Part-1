@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercises</title>
+    <style>
+      .finished {
+        padding: 10px 30px;
+        background-color: lightslategray;
+        color: white;
+        border: none;
+      }
+      .hidden {
+        display: none;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <button class="finished" id="myButton" onclick="
+      afterClick();
+      "></button>
+
+      <p></p>
+
+    <button onclick="
+      addToCart()
+    ">Add to cart</button>
+
+    <p id="addedMessage" class="hidden"> Added</p>
+
+    <p></p>
+
+    <button onclick="
+      message ++;
+    ">Add</button>
+    <button onclick="
+    if(message > 0){
+      message--;
+    } else{
+      message = 0;
+    }
+    ">Remove</button>
+
+    <script>
+      // Exercise 12a
+
+      const add = function() {
+        console.log(2 + 3);
+      }
+      add();
+      add();
+
+      // Exercise 12b
+
+      function runTwice(fun) {
+        fun();
+        fun();
+      }
+      runTwice(function(){console.log('12b')});
+      runTwice(add);
+
+      // Exercis 12c, 12d
+      function finished() {
+        const button = document.getElementById('myButton');
+        button.innerText = "Finished"
+      }
+
+      function afterClick() {
+        const button = document.getElementById('myButton');
+        button.innerText = "Loading...";
+        setTimeout(finished, 1000);
+      }
+
+      // Exercis 12e, 12f
+      let timer;
+
+      function addToCart() {
+        const addedMessage = document.getElementById('addedMessage');
+        addedMessage.style.display = "block";
+
+        clearTimeout(timer);
+
+        timer = setTimeout(function() {
+          addedMessage.style.display = "none";
+        }, 2000)
+      }
+
+      // Exercis 12g, 12h, 12i
+
+      let message = 2;
+
+      setInterval(function() {
+        document.title = `(${message}) New messages`
+      }, 1000);
+
+
+
+      
+    </script>
+  </body>
+</html> 
+ 
