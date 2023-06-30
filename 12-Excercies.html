@@ -17,15 +17,11 @@
   </head>
   <body>
 
-    <button class="finished" id="myButton" onclick="
-      afterClick();
-      "></button>
+    <button class="finished" id="myButton"></button>
 
       <p></p>
 
-    <button onclick="
-      addToCart()
-    ">Add to cart</button>
+    <button class="js-add-to-cart">Add to cart</button>
 
     <p id="addedMessage" class="hidden"> Added</p>
 
@@ -60,43 +56,92 @@
       runTwice(function(){console.log('12b')});
       runTwice(add);
 
-      // Exercis 12c, 12d
+      // Exercis 12c, 12d, 12q
+      const button = document.getElementById('myButton');
       function finished() {
-        const button = document.getElementById('myButton');
         button.innerText = "Finished"
       }
 
       function afterClick() {
-        const button = document.getElementById('myButton');
         button.innerText = "Loading...";
         setTimeout(finished, 1000);
       }
+      button.addEventListener('click', () => {
+        afterClick()
+      })
 
-      // Exercis 12e, 12f
+      // Exercis 12e, 12f, 12p, 12q
       let timer;
 
+      const addedMessage = document.getElementById('addedMessage');
+      const addToCartButton = document.getElementsByClassName('.js-add-to-cart');
+      addToCartButton.addEventListener('click', () => {
+        addToCart()
+      })
       function addToCart() {
-        const addedMessage = document.getElementById('addedMessage');
         addedMessage.style.display = "block";
 
         clearTimeout(timer);
 
-        timer = setTimeout(function() {
+        timer = setTimeout(() => {
           addedMessage.style.display = "none";
         }, 2000)
       }
 
-      // Exercis 12g, 12h, 12i
+      // Exercis 12g, 12h, 12i, 12p
 
       let message = 2;
 
-      setInterval(function() {
+      setInterval(() => {
         document.title = `(${message}) New messages`
       }, 1000);
 
 
+      // Exercis 12j, 12k
 
-      
+      const multiplay = (a, b) => a * b;
+
+      console.log(multiplay(2,3));
+      console.log(multiplay(7,10));
+
+      // Exercis 12l
+
+      function countPositive(nums) {
+        let count = 0;
+        nums.forEach(element => {
+          if(element > 0)
+          count++
+        });
+        return count
+      }
+      console.log(countPositive([1,-3,5]));
+      console.log(countPositive([-2,3,-5,7,10]));
+
+      // Exercis 12m
+
+      function addNum(array,num) {
+        console.log(array.map(value => value + num));
+      }      
+      addNum([1,2,3], 2);
+      addNum([-2,-1,0,99], 2);
+
+      // Exercis 12n, 12o
+
+      function removeEgg(foods) {
+      let eggCount = 0;
+
+       return foods.filter(value => {
+          if (value === 'egg' && eggCount < 2){
+            eggCount++;
+            return false;
+          } else{
+            return true;
+          }          
+        })
+      }
+
+      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
     </script>
   </body>
 </html> 
