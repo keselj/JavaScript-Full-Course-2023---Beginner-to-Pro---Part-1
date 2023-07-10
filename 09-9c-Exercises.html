@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Excercies</title>
+  </head>
+  <body>
+    <button onclick="
+      paragraf('heads');
+      ">heads</button>
+    <button onclick="
+    paragraf('tails');
+    ">tails</button>
+    <p class="js-p"></p>
+    <script>
+      function paragraf (playerMove) {
+        const computerMove1 = pickComputerMove();
+        
+        if(computerMove1 === 'heads'){
+          if(playerMove === 'heads'){
+            document.querySelector('.js-p').innerHTML = `You chose: ${playerMove}, computer move ${computerMove1}, no one wins. Try again.`
+          } else{
+            document.querySelector('.js-p').innerHTML = `You chose: ${playerMove}, computer move ${computerMove1}, you win.`
+          }
+        } else if(computerMove1 === 'tails') {
+            if(playerMove === 'tails'){
+              document.querySelector('.js-p').innerHTML = `You chose: ${playerMove}, computer move ${computerMove1}, no one wins. Try again.`
+          } else{
+          document.querySelector('.js-p').innerHTML = `You chose: ${playerMove}, computer move ${computerMove1}, you win.`
+          }
+        
+        }
+         
+      
+
+      }      
+
+      function pickComputerMove() {
+      const randomNumber = Math.random();
+      let computerMove = '';
+        if(randomNumber <= 0.5){
+          computerMove = 'heads';
+        }else{
+          computerMove = 'tails'
+        }
+        return computerMove;
+      }
+      console.log(pickComputerMove());
+      console.log(Math.random())
+     
+    </script>
+  </body>
+</html>
